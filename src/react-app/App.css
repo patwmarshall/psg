@@ -1,25 +1,64 @@
-/* src/react-app/App.css */
+/* Form: compact, accessible, mobile-friendly */
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
 
-/* minimal styles for the GameManager UI */
-.app-header {
-  padding: 1rem;
-  background: linear-gradient(90deg,#0ea5e9,#c084fc);
+.form-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1 1 220px; /* grow, shrink, base */
+}
+
+.form-field label {
+  font-size: 0.8rem;
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+
+.form-field input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 120ms ease, box-shadow 120ms ease, transform 80ms ease;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+/* Focus state */
+.form-field input:focus {
+  border-color: #6ca0ff;
+  box-shadow: 0 0 0 3px rgba(108,160,255,0.12);
+  transform: translateY(-1px);
+}
+
+/* Button style */
+.button-primary {
+  background: linear-gradient(180deg,#1f7af3,#165ec7);
   color: white;
+  border: 0;
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(20,40,80,0.08);
+  transition: transform 80ms ease, box-shadow 120ms ease, opacity 120ms;
 }
 
-.game-manager {
-  padding: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
+.button-primary:active { transform: translateY(1px) scale(0.995); }
+.button-primary[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
-.add-section, .list-section, .edit-section { margin-bottom: 1rem; }
-
-.games { list-style: none; padding: 0; }
-.game-item { display:flex; justify-content:space-between; align-items:center; padding: 0.5rem; border-bottom: 1px solid #eee; }
-.meta { font-size: 0.9rem; color: #444; display:flex; gap:1rem; }
-.actions button { margin-left: 0.5rem; }
-.danger { color: #fff; background: #ef4444; border: none; padding: 0.3rem 0.5rem; }
-
-input { padding: 0.4rem; margin-right: 0.4rem; }
-button { padding: 0.4rem 0.6rem; }
+/* Small screens: stack controls */
+@media (max-width: 520px) {
+  .form-row { flex-direction: column; gap: 0.5rem; }
+  .button-primary { width: 100%; }
+}
