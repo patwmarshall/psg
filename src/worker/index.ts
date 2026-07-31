@@ -47,7 +47,7 @@ app.delete("/api/games/:id", (c) => {
   const id = c.req.param("id");
   if (!games.has(id)) return c.text("Not found", 404);
   games.delete(id);
-  return c.text("", 204);
+  return new Response(null, { status: 204 });
 });
 
 app.post("/api/games/:id/transfer", async (c) => {
