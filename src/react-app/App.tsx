@@ -7,7 +7,7 @@ function App() {
 	return (
 		<>
 			<header className="app-header">
-				<h1>PSG — Personal Shelf for Games</h1>
+				<h1>PSG — Portlaoise Social Board Games</h1>
 				<p>Manage board game names, owners, and who currently has them.</p>
 			</header>
 			<main>
