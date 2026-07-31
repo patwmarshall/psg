@@ -1,8 +1,8 @@
-# React + Vite + Hono + Cloudflare Workers
+# Portlaoise Social Board Games
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/vite-react-template)
 
-This template provides a minimal setup for building a React application with TypeScript and Vite, designed to run on Cloudflare Workers. It features hot module replacement, ESLint integration, and the flexibility of Workers deployments.
+Portlaoise Social Board Games is a small web app to manage board game names, owners, and who currently has them for the Portlaoise community. It is built with React, TypeScript, and Vite and is designed to run on Cloudflare Workers.
 
 ![React + TypeScript + Vite + Cloudflare Workers](https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/fc7b4b62-442b-4769-641b-ad4422d74300/public)
 
