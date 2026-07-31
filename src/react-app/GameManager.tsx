@@ -28,10 +28,22 @@ export default function GameManager() {
   async function onAdd(e: React.FormEvent) {
     e.preventDefault();
     if (!name.trim()) return;
-    await api.addGame({ name: name.trim(), owner: owner.trim(), holder: owner.trim() || "" });
-    setName("");
-    setOwner("");
-    fetchGames();
+    try {
+      await api.addGame({ name: name.trim(), owner: owner.trim(), holder: owner.trim() || "" });
+      setName("");
+      setOwner("");
+      // Ensure the UI is refreshed after adding a game. Await fetchGames so state updates before returning.
+      await fetchGames();
+    } catch (err) {
+      console.error(err);
+      alert("Failed to add game");
+      // As a last-resort fallback, reload the page so the UI reflects the server state.
+      try {
+        window.location.reload();
+      } catch (reloadErr) {
+        // ignore
+      }
+    }
   }
 
   async function onDelete(id: string) {
