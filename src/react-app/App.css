@@ -1,45 +1,25 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
+/* src/react-app/App.css */
+
+/* minimal styles for the GameManager UI */
+.app-header {
+  padding: 1rem;
+  background: linear-gradient(90deg,#0ea5e9,#c084fc);
+  color: white;
 }
 
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em #61dafbaa);
-}
-.logo.cloudflare:hover {
-	filter: drop-shadow(0 0 2em #f6821faa);
+.game-manager {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-@keyframes logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
+.add-section, .list-section, .edit-section { margin-bottom: 1rem; }
 
-@media (prefers-reduced-motion: no-preference) {
-	a:nth-of-type(2) .logo {
-		animation: logo-spin infinite 20s linear;
-	}
-}
+.games { list-style: none; padding: 0; }
+.game-item { display:flex; justify-content:space-between; align-items:center; padding: 0.5rem; border-bottom: 1px solid #eee; }
+.meta { font-size: 0.9rem; color: #444; display:flex; gap:1rem; }
+.actions button { margin-left: 0.5rem; }
+.danger { color: #fff; background: #ef4444; border: none; padding: 0.3rem 0.5rem; }
 
-.card {
-	padding: 2em;
-}
-
-.read-the-docs {
-	color: #888;
-}
+input { padding: 0.4rem; margin-right: 0.4rem; }
+button { padding: 0.4rem 0.6rem; }

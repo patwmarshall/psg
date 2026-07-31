@@ -1,6 +1,5 @@
 // src/react-app/App.tsx
 
-import React from "react";
 import "./App.css";
 import GameManager from "./GameManager";
 
