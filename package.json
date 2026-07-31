@@ -1,8 +1,8 @@
 {
-	"name": "psg",
-	"description": "A template for building a React application with Vite, Hono, and Cloudflare Workers",
+	"name": "portlaoise-social-board-games",
+	"description": "Portlaoise Social Board Games — a small web app to manage board game names, owners, and who currently has them for the Portlaoise community",
 	"cloudflare": {
-		"label": "Vite React Template",
+		"label": "Portlaoise Social Board Games",
 		"products": [
 			"Workers"
 		],
