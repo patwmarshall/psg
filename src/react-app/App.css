@@ -1,4 +1,52 @@
-/* Form: compact, accessible, mobile-friendly */
+/* Theme variables and theme classes for Portlaoise Social Board Games */
+:root {
+  --bg: #f7f7fb;
+  --card-bg: #ffffff;
+  --muted: #666;
+  --primary: #165ec7;
+  --accent: #1f7af3;
+  --header-gradient: linear-gradient(90deg,#0ea5e9,#c084fc);
+  --surface-shadow: 0 6px 18px rgba(20,40,80,0.06);
+}
+
+/* Wood theme */
+.theme-wood {
+  --bg: #f4efe6;
+  --card-bg: #fff7ef;
+  --muted: #5b3b2e;
+  --primary: #6b4a2f; /* brown */
+  --accent: #c08a4b;
+  --header-gradient: linear-gradient(90deg,#8b5f3a,#c08a4b);
+  --surface-shadow: 0 6px 20px rgba(20,30,20,0.06);
+}
+
+/* Dark theme */
+.theme-dark {
+  --bg: #0f1724;
+  --card-bg: #0b1220;
+  --muted: #9aa7bf;
+  --primary: #7aa2ff;
+  --accent: #b388ff;
+  --header-gradient: linear-gradient(90deg,#07203a,#2a2b39);
+  --surface-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Pastel theme */
+.theme-pastel {
+  --bg: #fffaf6;
+  --card-bg: #ffffff;
+  --muted: #666;
+  --primary: #ff8fab;
+  --accent: #ffd27d;
+  --header-gradient: linear-gradient(90deg,#ff9fb3,#ffd27d);
+  --surface-shadow: 0 6px 18px rgba(30,30,40,0.06);
+}
+
+/* Classic theme (default) */
+.theme-classic { }
+
+/* Preserve existing form styles below */
+
 .form-row {
   display: flex;
   gap: 0.5rem;
